@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+class HelloWorld {
+    static String myInput(){
+        Scanner obj = new Scanner(System.in);
+        String name = obj.nextLine();
+        return name;
+    }
+    
+    static String myName(String name){
+        String s = "+"+"-".repeat(name.length())+"+"+"\n"+"|"+name+"|"+"\n"+"+"+"-".repeat(name.length())+"+";
+        return s;
+        
+       
+    }
+
+
+    
+    public static void main(String[] args) {
+        String x = myInput();
+        String s = myName(x);
+        System.out.println(s);
+        
+    }
+    
+
+}

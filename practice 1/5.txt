@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+class depozit{
+    public static void main(String[] args){
+        Scanner obj = new Scanner(System.in);
+        System.out.println("Hello! How much money do you want to deposit. 3% per annum.");
+        int balance = obj.nextInt();
+        
+        System.out.println("for how long?");
+        
+        int year = obj.nextInt();
+        
+        for(int i = 0; i<year; i++ ){
+            balance += balance*0.03;
+            
+        }
+        
+        System.out.println("Your balance after "+ year+" year: " + balance);
+        
+        
+    }
+    
+}

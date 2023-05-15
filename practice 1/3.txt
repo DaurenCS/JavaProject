@@ -1,0 +1,40 @@
+import java.util.Scanner;
+public class P3 {
+ 
+     static String myInput(){
+    
+        Scanner obj = new Scanner(System.in);
+        String name = obj.nextLine();
+        return name;
+    }
+    
+  static String fun(String s){
+      if(s.equals("exit")){
+          System.exit(0);
+      }
+      String est[] = {"F","F","F","F","F","F","F","F","F","F","F",
+        "D","D+", "C-", "C", "C+", "B-", "B", "B+", "A-", "A", "A"};
+      
+      
+        int num = Integer.parseInt(s);
+        int mathedRes = Math.round((num)/5);
+        return est[mathedRes+1];
+        
+  }
+  static void show(String x){
+      
+      while(x != "exit"){
+          System.out.print(fun(x)+ '\n');
+          x = myInput();
+          
+      }
+      System.out.println("Goodbay");
+  }
+  
+  public static void main(String[] args) {
+      String a = myInput();
+      show(a);
+      
+  }
+}
+ 
